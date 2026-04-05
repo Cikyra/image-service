@@ -75,7 +75,7 @@ public class Main {
 
     }
 
-    private static void addImagePath(Path serviceFilePath) throws IOException{
+    private static void addImagePath(Path serviceFilePath) throws IOException, InterruptedException {
 
         int imageIndex;
         try {
@@ -106,6 +106,11 @@ public class Main {
 
         //full file path to the image based on the number given
         String imagePath = "C:\\Users\\larla\\OneDrive\\Desktop\\Spring26\\CS361\\Week 1\\week1Images\\" + imageFiles[imageIndex];
+
+
+        // pause for 2 seconds before changing file, so I can show the text file changing
+        Thread.sleep(2000);
+
 
         lastWritten = imagePath;
         ignoreNextWrite = true;
